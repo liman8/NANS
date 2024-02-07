@@ -239,6 +239,8 @@ class ImageInterpolatorApp:
                 new_width = int(self.new_width_var.get())
                 interpolation_method = self.interpolation_method_var.get()
 
+                self.previous_image = self.input_image
+
                 if interpolation_method == "Bilinear":
                     self.output_image = self.bilinear_interpolation(self.input_image, new_height, new_width)
                 elif interpolation_method == "Bicubic":
